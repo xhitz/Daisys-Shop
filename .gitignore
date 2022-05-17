@@ -1,1 +1,9 @@
-node_modules
+/node_modules
+
+/build
+
+.env
+
+# Hardhat files
+artifacts
+cache
