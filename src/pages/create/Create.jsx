@@ -1,5 +1,4 @@
 import './create.css'
-import Image from '../../assets/Image.png'
 import {useEffect, useState} from "react";
 import {create as ipfsHttpClient} from 'ipfs-http-client'
 import {useMarketContract} from "../../hooks/useMarketContract";
@@ -14,15 +13,11 @@ const Create = () => {
     const {address, connect, performActions} = useContractKit()
     const navigate = useNavigate();
     useEffect(() => {
-
         if (!address) {
-
             (async () => {
                 await connect()
             })()
-
         }
-
     }, [address, connect])
 
 
@@ -80,9 +75,7 @@ const Create = () => {
     const mintThenList = async (result, defaultAccount) => {
         const uri = `https://ipfs.infura.io/ipfs/${result.path}`
 
-
         const listingPrice = ethers.utils.parseEther(price.toString())
-
 
         // mint nft
        const tx =  await marketplace.methods.createToken(uri,listingPrice ).send({
