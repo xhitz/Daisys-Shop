@@ -5,20 +5,14 @@
   "dependencies": {
     "@celo-tools/use-contractkit": "^3.0.1",
     "@celo/contractkit": "^1.5.2",
-    "@nomiclabs/hardhat-ethers": "^2.0.0",
-    "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.5.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "big-number": "^2.0.0",
-    "chai": "^4.3.6",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
-    "ethereum-waffle": "^3.4.4",
-    "ethers": "^5.0.5",
-    "hardhat": "^2.9.3",
     "ipfs-http-client": "^56.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -26,7 +20,7 @@
     "react-loader-spinner": "^6.0.0-0",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^4.0.3",
     "react-slick": "^0.28.1",
     "react-spinners": "^0.11.0",
     "slick-carousel": "^1.8.1",
@@ -57,6 +51,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.8.2",
+    "react-error-overlay": "^6.0.9"
   },
   "proxy": "http://localhost:5000/api/"
 }

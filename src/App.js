@@ -1,5 +1,5 @@
 import './App.css';
-import {Navbar,Footer} from './components'
+import {Navbar} from './components'
 import {Home,Profile,Item, Create} from './pages'
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ItemRelist from "./pages/itemRelist/itemRelist";
@@ -8,11 +8,8 @@ function App() {
 
   return (
     <div>
-
-        <Router>
-
-
-      <Navbar />
+      <Router>
+        <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="nft/:id" element={<Item />} />
@@ -20,8 +17,6 @@ function App() {
             <Route path="/create" element={<Create /> } />
             <Route path="/profile" element={<Profile />} />
           </Routes>
-     
-
         </Router>
     </div>
   );

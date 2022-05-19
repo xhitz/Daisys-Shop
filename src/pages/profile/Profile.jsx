@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './profile.css'
-import profile_banner from '../../assets/profile_banner.png'
 import Nfts from '../../components/nfts/Nfts'
 import {useContractKit} from "@celo-tools/use-contractkit";
 import {useMarketContract} from "../../hooks/useMarketContract";
@@ -9,12 +8,10 @@ import {ethers} from "ethers";
 
 const Profile = () => {
 
-    const {address, connect, performActions} = useContractKit()
+    const {address} = useContractKit()
     const marketplace = useMarketContract()
 
-
     const [nfts, setNfts] = useState([]);
-    const [soldNfts, setSoldNfts] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -52,19 +49,12 @@ const Profile = () => {
         } finally {
             setLoading(false)
         }
-
-
     }
-
 
     return (
         <div className='profile section__padding'>
-            <div className="profile-top">
-               
-            </div>
             <div className="profile-bottom">
-     
-                <Nfts nfts={nfts} loading={loading} title="Your NFTs" relist={true}/>
+                <Nfts nfts={nfts} address={address} loading={loading} title="Your NFTs" relist={true}/>
             </div>
         </div>
     );

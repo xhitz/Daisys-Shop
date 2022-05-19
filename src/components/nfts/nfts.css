@@ -1,8 +1,7 @@
 .pih{
   color:white;
   font-size:22px;
-
- 
+  text-align:center;
 }
 .bids-container{
   display: flex;
